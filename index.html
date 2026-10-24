@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en-ZA" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bethany Beauty | Bio Sculpture Certified Nail Technician</title>
+  <meta name="description" content="Bethany Beauty is a boutique nail studio devoted strictly to Bio Sculpture. Healthier nails, flawless structure and a finish that lasts - by appointment only." />
+  <meta name="theme-color" content="#006666" />
+  <link rel="canonical" href="https://www.bethanybeauty.co.za/" />
+
+  <!-- Social sharing. Absolute URLs are required for link previews. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bethany Beauty" />
+  <meta property="og:locale" content="en_ZA" />
+  <meta property="og:url" content="https://www.bethanybeauty.co.za/" />
+  <meta property="og:title" content="Bethany Beauty | Bio Sculpture Certified Nail Technician" />
+  <meta property="og:description" content="Strictly Bio Sculpture. Beautiful nails, sculpted with intention." />
+  <meta property="og:image" content="https://www.bethanybeauty.co.za/resources/images/hero.jpg" />
+  <meta property="og:image:width" content="1920" />
+  <meta property="og:image:height" content="1280" />
+  <meta property="og:image:alt" content="Bio Sculpture gel nails by Bethany Beauty" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bethany Beauty | Bio Sculpture Certified Nail Technician" />
+  <meta name="twitter:description" content="Strictly Bio Sculpture. Beautiful nails, sculpted with intention." />
+  <meta name="twitter:image" content="https://www.bethanybeauty.co.za/resources/images/hero.jpg" />
+  <!-- TODO(domain): replace www.bethanybeauty.co.za everywhere if the live domain differs
+       (canonical, og/twitter URLs, sitemap.xml, robots.txt). -->
+
+  <link rel="icon" type="image/png" href="resources/images/favicon.png" sizes="96x96" />
+  <link rel="apple-touch-icon" href="resources/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- The hero image is painted via CSS, so preload it to keep LCP fast -->
+  <link rel="preload" as="image" href="resources/images/hero.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Google Fonts: Playfair Display (headings) + Lato (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind: compiled stylesheet. Rebuild with `npm run build:css` after markup edits. -->
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!-- Structured data: lets Google show the phone number, services and business type.
+       TODO: add "sameAs": ["<real Instagram URL>"] and a full PostalAddress once confirmed. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "name": "Bethany Beauty",
+    "description": "Boutique nail studio devoted strictly to Bio Sculpture. Healthier nails, flawless structure and a finish that lasts - by appointment only.",
+    "url": "https://www.bethanybeauty.co.za/",
+    "image": "https://www.bethanybeauty.co.za/resources/images/hero.jpg",
+    "logo": "https://www.bethanybeauty.co.za/images/logo.png",
+    "telephone": "+27747409490",
+    "email": "rebekah@bethanybeauty.co.za",
+    "currenciesAccepted": "ZAR",
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+    "areaServed": { "@type": "Country", "name": "South Africa" },
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bio Sculpture Overlay" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nail Sculpting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance and Removal" } }
+    ]
+  }
+  </script>
+</head>
+
+<body class="font-body bg-brand-light text-brand-dark antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[110] focus:rounded-full focus:bg-brand-gold focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-brand-dark">
+    Skip to content
+  </a>
+
+  <!-- ============================ HEADER / NAV ============================ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8" aria-label="Main navigation">
+      <a href="#home" class="flex shrink-0 items-center" aria-label="Bethany Beauty, home">
+        <!-- Logo: black script keyed onto a transparent PNG, so the drop-shadow follows
+             the letterforms instead of drawing a grey box around a white image. -->
+        <img src="images/logo.png" alt="Bethany Beauty" width="243" height="172"
+          class="logo-shadow h-14 w-auto lg:h-20" />
+      </a>
+
+      <ul class="hidden items-center gap-6 text-[13px] font-medium tracking-wide text-brand-dark/70 md:flex lg:gap-9 lg:text-sm">
+        <li><a href="#home" class="nav-link transition hover:text-brand-teal">Home</a></li>
+        <li><a href="#about" class="nav-link transition hover:text-brand-teal">About</a></li>
+        <li><a href="#services" class="nav-link transition hover:text-brand-teal">Services</a></li>
+        <li><a href="#bio-sculpture" class="nav-link transition hover:text-brand-teal">Bio Sculpture</a></li>
+        <li><a href="#gallery" class="nav-link transition hover:text-brand-teal">Gallery</a></li>
+        <li><a href="#reviews" class="nav-link transition hover:text-brand-teal">Reviews</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#book"
+          class="hidden rounded-full bg-brand-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.18em] text-brand-dark shadow-sm transition hover:bg-brand-teal hover:text-white sm:inline-flex">
+          Book Now
+        </a>
+        <button id="menu-toggle" type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-black/10 text-brand-dark transition hover:border-brand-gold hover:text-brand-teal md:hidden"
+          aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden max-h-[calc(100vh-5.5rem)] overflow-y-auto border-t border-black/5 bg-white px-5 pb-6 pt-2 shadow-lg md:hidden">
+      <ul class="flex flex-col divide-y divide-black/5 text-base text-brand-dark/80">
+        <li><a href="#home" class="block py-3.5 transition hover:text-brand-teal">Home</a></li>
+        <li><a href="#about" class="block py-3.5 transition hover:text-brand-teal">About</a></li>
+        <li><a href="#services" class="block py-3.5 transition hover:text-brand-teal">Services</a></li>
+        <li><a href="#bio-sculpture" class="block py-3.5 transition hover:text-brand-teal">Bio Sculpture</a></li>
+        <li><a href="#gallery" class="block py-3.5 transition hover:text-brand-teal">Gallery</a></li>
+        <li><a href="#reviews" class="block py-3.5 transition hover:text-brand-teal">Reviews</a></li>
+      </ul>
+      <a href="#book" class="mt-5 flex items-center justify-center gap-2 rounded-full bg-brand-gold px-6 py-3.5 text-sm font-bold uppercase tracking-[0.18em] text-brand-dark transition hover:bg-brand-teal hover:text-white">
+        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Book Now
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <section id="home" class="hero-bg hero-full relative isolate flex items-center justify-center overflow-hidden px-5 pb-16 pt-32 text-center sm:px-8 sm:pb-20 sm:pt-40">
+      <div class="relative z-10 mx-auto max-w-3xl">
+        <p class="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-black/25 px-4 py-1.5 text-[10px] uppercase tracking-[0.3em] text-brand-gold backdrop-blur-sm">
+          <i class="fa-solid fa-award" aria-hidden="true"></i>
+          Bio Sculpture Certified
+        </p>
+
+        <h1 class="mt-7 font-display text-[2.75rem] leading-[1.08] text-white text-balance sm:text-5xl lg:text-[4.25rem]">
+          Strictly <span class="italic text-brand-gold">Bio Sculpture</span>
+        </h1>
+
+        <p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
+          Premium, natural nail care certified by Bio Sculpture
+        </p>
+
+        <div class="mt-10 flex flex-col items-center gap-5">
+          <a href="#book"
+            class="inline-flex items-center justify-center gap-2.5 rounded-full bg-brand-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] text-brand-dark shadow-lg transition hover:bg-white">
+            Book Your Appointment
+            <i class="fa-solid fa-arrow-right text-[0.7rem]" aria-hidden="true"></i>
+          </a>
+          <p class="text-[10px] uppercase tracking-[0.3em] text-white/55">By appointment only</p>
+        </div>
+      </div>
+
+      <a href="#about"
+        class="absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[9px] uppercase tracking-[0.3em] text-white/70 transition hover:text-brand-gold sm:flex">
+        <span>Scroll</span>
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- ============================ TRUST STRIP ============================ -->
+    <section class="border-b border-black/5 bg-brand-light" aria-label="Why choose Bethany Beauty">
+      <div class="mx-auto grid max-w-7xl gap-px bg-black/5 px-0 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex items-start gap-4 bg-brand-light px-6 py-8 sm:px-8">
+          <i class="fa-solid fa-leaf mt-1 text-lg text-brand-teal" aria-hidden="true"></i>
+          <div>
+            <h2 class="font-display text-base text-brand-dark">Kinder to nails</h2>
+            <p class="mt-1 text-sm leading-relaxed text-brand-dark/60">Flexible gel that moves with your natural nail.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-brand-light px-6 py-8 sm:px-8">
+          <i class="fa-solid fa-certificate mt-1 text-lg text-brand-teal" aria-hidden="true"></i>
+          <div>
+            <h2 class="font-display text-base text-brand-dark">Genuinely certified</h2>
+            <p class="mt-1 text-sm leading-relaxed text-brand-dark/60">Trained and certified in Bio Sculpture methods.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-brand-light px-6 py-8 sm:px-8">
+          <i class="fa-solid fa-hand-sparkles mt-1 text-lg text-brand-teal" aria-hidden="true"></i>
+          <div>
+            <h2 class="font-display text-base text-brand-dark">No acrylics, ever</h2>
+            <p class="mt-1 text-sm leading-relaxed text-brand-dark/60">One product, used properly &mdash; nothing else on the menu.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-brand-light px-6 py-8 sm:px-8">
+          <i class="fa-solid fa-gem mt-1 text-lg text-brand-teal" aria-hidden="true"></i>
+          <div>
+            <h2 class="font-display text-base text-brand-dark">A lasting finish</h2>
+            <p class="mt-1 text-sm leading-relaxed text-brand-dark/60">Considered detail from prep through to top coat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ ABOUT ============================ -->
+    <section id="about" class="relative overflow-hidden bg-white py-20 sm:py-28">
+      <div class="pointer-events-none absolute -right-24 top-16 hidden h-72 w-72 rounded-full border border-brand-gold/20 lg:block" aria-hidden="true"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+
+        <!-- Left: working photo with overlapping certification badge -->
+        <div class="reveal">
+          <figure class="relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none">
+            <div class="pointer-events-none absolute -left-3 -top-3 hidden h-full w-full rounded-3xl border border-brand-gold/50 sm:block" aria-hidden="true"></div>
+            <img src="images/working.webp"
+              alt="Bethany, a certified Bio Sculpture nail technician, in her studio"
+              class="relative aspect-[4/5] w-full rounded-3xl object-cover object-top shadow-soft"
+              width="900" height="1124" loading="lazy" decoding="async" />
+            <img src="images/badge.jpg"
+              alt="Bio Sculpture Certified seal"
+              class="absolute -bottom-6 -right-4 h-24 w-24 rounded-full object-cover shadow-xl ring-4 ring-white sm:-right-6 sm:h-28 sm:w-28 lg:-right-8 lg:h-32 lg:w-32"
+              width="400" height="400" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+
+        <!-- Right: intro copy -->
+        <div class="reveal">
+          <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-teal">About the studio</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight text-brand-dark text-balance sm:text-4xl lg:text-[2.75rem]">
+            Meet Bethany
+          </h2>
+          <div class="gold-rule mt-6 w-24"></div>
+
+          <p class="mt-6 text-base leading-relaxed text-brand-dark/70">
+            Bethany is a certified Bio Sculpture nail technician with a calm, detail-led
+            approach to every set. She works with Bio Sculpture only &mdash; a flexible gel
+            system that strengthens and protects the natural nail, rather than covering up
+            the damage left behind by acrylics and hard gels.
+          </p>
+          <p class="mt-4 text-base leading-relaxed text-brand-dark/70">
+            Appointments are one-to-one and unhurried, so there is time to shape, refine and
+            finish properly. From careful prep through to aftercare advice, the goal stays the
+            same: healthy, clean beauty nail care that looks polished and feels kind to your
+            own nails.
+          </p>
+
+          <div class="mt-8 flex items-start gap-3 rounded-2xl border border-brand-teal/15 bg-brand-teal/[0.04] px-5 py-4">
+            <i class="fa-solid fa-leaf mt-0.5 text-brand-teal" aria-hidden="true"></i>
+            <p class="text-sm leading-relaxed text-brand-dark/75">
+              <span class="font-bold text-brand-dark">Clean Beauty</span> - Non-toxic, vegan-friendly products.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ SERVICES ============================ -->
+    <section id="services" class="bg-brand-light py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-teal">The Menu</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight text-brand-dark text-balance sm:text-4xl lg:text-[2.75rem]">
+            Our Services
+          </h2>
+          <div class="gold-rule mx-auto mt-6 w-24"></div>
+          <p class="mt-6 text-base leading-relaxed text-brand-dark/65">
+            Three focused treatments, all built on the Bio Sculpture gel system &mdash; chosen
+            because it protects the natural nail. Final pricing is confirmed at consultation.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1: Bio Sculpture Overlay -->
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl reveal">
+            <div class="overflow-hidden">
+              <img src="images/product.webp"
+                alt="Bio Sculpture EVO Builder Gel bottle held above a set of nude pink gel nails"
+                class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                width="900" height="675" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="font-display text-xl text-brand-dark">Bio Sculpture Overlay</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-brand-dark/65">
+                A flexible layer of Bio Sculpture gel over your own nail, adding strength and a
+                smooth, glossy finish while the natural nail stays protected and grows underneath.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2: Nail Sculpting -->
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl reveal">
+            <div class="overflow-hidden">
+              <img src="images/hands.webp"
+                alt="Bethany sculpting a Bio Sculpture gel nail with a fine detailing brush"
+                class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                width="900" height="675" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="font-display text-xl text-brand-dark">Nail Sculpting</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-brand-dark/65">
+                Custom length and shape, sculpted by hand with Bio Sculpture builder gel &mdash;
+                from a barely-there almond to a long tapered square, designed around your hands.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3: Maintenance & Removal -->
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl reveal">
+            <div class="overflow-hidden">
+              <img src="images/headshot.webp"
+                alt="Bethany, a Bio Sculpture nail technician, smiling in the studio"
+                class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                width="900" height="675" loading="lazy" decoding="async" />
+            </div>
+            <div class="flex flex-1 flex-col p-6 sm:p-7">
+              <h3 class="font-display text-xl text-brand-dark">Maintenance &amp; Removal</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-brand-dark/65">
+                Refills that keep your set looking fresh, plus gentle soak-off removal that lifts
+                the gel without scraping &mdash; leaving your natural nails calm, strong and ready
+                for the next set.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl border border-brand-teal/15 bg-white px-6 py-6 sm:flex-row sm:px-9 reveal">
+          <p class="text-center text-sm leading-relaxed text-brand-dark/65 sm:text-left">
+            <i class="fa-solid fa-circle-info mr-2 text-brand-teal" aria-hidden="true"></i>
+            Add hand-painted nail art, a classic French or a chrome finish from R80.
+            Refills are recommended every 2&ndash;3 weeks.
+          </p>
+          <a href="#book" class="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-brand-gold px-6 py-3.5 text-xs font-bold uppercase tracking-[0.18em] text-brand-dark transition hover:bg-brand-teal hover:text-white">
+            Check availability
+            <i class="fa-solid fa-arrow-right text-[0.7rem]" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ BIO SCULPTURE ============================ -->
+    <section id="bio-sculpture" class="relative overflow-hidden bg-brand-dark py-20 text-white sm:py-28">
+      <div class="pointer-events-none absolute inset-0 opacity-[0.07]" aria-hidden="true"
+        style="background-image: radial-gradient(circle at 20% 20%, #D4AF37 0, transparent 45%), radial-gradient(circle at 80% 70%, #006666 0, transparent 45%);"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16">
+        <div class="relative reveal lg:col-span-5">
+          <img src="resources/images/bethany-portrait-certified.webp"
+            alt="Bethany wearing a Bethany Beauty apron embroidered with Bio Sculpture Certified"
+            class="w-full rounded-3xl object-cover shadow-2xl" width="1280" height="1920" loading="lazy" />
+          <div class="absolute -bottom-6 left-5 flex items-center gap-3 rounded-2xl bg-white/95 px-5 py-4 shadow-xl backdrop-blur sm:left-8">
+            <img src="resources/images/bio-sculpture-certified-seal-320.png" alt="" width="320" height="320"
+              loading="lazy" decoding="async" class="h-12 w-12" aria-hidden="true" />
+            <div class="leading-tight">
+              <p class="font-display text-sm text-brand-dark">Bio Sculpture Certified</p>
+              <p class="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-brand-dark/65">Nail Technician</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal lg:col-span-7">
+          <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-gold">The Difference</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight text-balance sm:text-4xl lg:text-[2.75rem]">
+            Why it is Bio Sculpture <span class="italic text-brand-gold">only</span>.
+          </h2>
+          <div class="gold-rule mt-6 w-24"></div>
+
+          <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70">
+            Bio Sculpture is a soft gel system built around the health of the natural nail.
+            It is flexible, breathable and applied with care &mdash; which is exactly why it
+            is the only system in this studio.
+          </p>
+
+          <dl class="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            <div class="border-l border-brand-gold/30 pl-5">
+              <dt class="font-display text-lg text-white">Flexible by design</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-white/60">
+                The gel flexes with your nail instead of fighting it, so lifting and
+                breakage are far less likely.
+              </dd>
+            </div>
+            <div class="border-l border-brand-gold/30 pl-5">
+              <dt class="font-display text-lg text-white">Nail-friendly prep</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-white/60">
+                Gentle preparation and no aggressive drilling &mdash; your natural nail stays
+                protected underneath.
+              </dd>
+            </div>
+            <div class="border-l border-brand-gold/30 pl-5">
+              <dt class="font-display text-lg text-white">True, lasting colour</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-white/60">
+                A huge shade range with a finish that keeps its gloss and does not fade.
+              </dd>
+            </div>
+            <div class="border-l border-brand-gold/30 pl-5">
+              <dt class="font-display text-lg text-white">Considered formulas</dt>
+              <dd class="mt-2 text-sm leading-relaxed text-white/60">
+                Bio Sculpture does not test on animals &mdash; a product line that aligns with
+                how I like to work.
+              </dd>
+            </div>
+          </dl>
+
+          <div class="mt-10 flex flex-wrap items-center gap-6 border-t border-white/10 pt-8">
+            <p class="text-[11px] uppercase tracking-[0.28em] text-white/60">Strictly Bio Sculpture &middot; No Acrylics &middot; No Hard Gel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ GALLERY ============================ -->
+    <section id="gallery" class="bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between reveal">
+          <div class="max-w-xl">
+            <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-teal">The Work</p>
+            <h2 class="mt-4 font-display text-3xl leading-tight text-brand-dark text-balance sm:text-4xl lg:text-[2.75rem]">
+              A closer look
+            </h2>
+            <div class="gold-rule mt-6 w-24"></div>
+          </div>
+          <p class="max-w-sm text-sm leading-relaxed text-brand-dark/60">
+            Real sets, real finishes &mdash; from sheer everyday overlays to softly sculpted length.
+          </p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <button type="button" data-lightbox data-src="resources/images/bio-sculpture-manicure.webp"
+            data-caption="Bio Sculpture in a soft nude"
+            class="group relative overflow-hidden rounded-2xl bg-brand-dark/5 reveal">
+            <img src="resources/images/bio-sculpture-manicure.webp" alt="Bio Sculpture manicure in a soft nude shade"
+              class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.04]" width="1920" height="1280" loading="lazy" />
+            <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between text-left text-xs font-bold uppercase tracking-[0.16em] text-white opacity-0 transition duration-300 group-hover:opacity-100">
+              Bio Sculpture overlay
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <button type="button" data-lightbox data-src="resources/images/evo-builder-gel.webp"
+            data-caption="Evo Builder Gel by Bio Sculpture"
+            class="group relative overflow-hidden rounded-2xl bg-brand-dark/5 reveal">
+            <img src="resources/images/evo-builder-gel.webp" alt="Bio Sculpture Evo Builder Gel"
+              class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.04]" width="1920" height="1280" loading="lazy" />
+            <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between text-left text-xs font-bold uppercase tracking-[0.16em] text-white opacity-0 transition duration-300 group-hover:opacity-100">
+              Evo Builder Gel
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <button type="button" data-lightbox data-src="resources/images/apron-detail.webp"
+            data-caption="The details: gold embroidery on a Bethany Beauty apron"
+            class="group relative overflow-hidden rounded-2xl bg-brand-dark/5 reveal">
+            <img src="resources/images/apron-detail.webp" alt="Gold embroidered Bethany Beauty detail on a black apron"
+              class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.04]" width="1920" height="1280" loading="lazy" />
+            <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between text-left text-xs font-bold uppercase tracking-[0.16em] text-white opacity-0 transition duration-300 group-hover:opacity-100">
+              Signature detail
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <button type="button" data-lightbox data-src="resources/images/bethany-in-studio.webp"
+            data-caption="Inside the studio"
+            class="group relative overflow-hidden rounded-2xl bg-brand-dark/5 reveal">
+            <img src="resources/images/bethany-in-studio.webp" alt="Bethany in her nail studio"
+              class="aspect-[4/3] w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]" width="1584" height="1616" loading="lazy" />
+            <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between text-left text-xs font-bold uppercase tracking-[0.16em] text-white opacity-0 transition duration-300 group-hover:opacity-100">
+              The studio
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <button type="button" data-lightbox data-src="resources/images/hero.webp"
+            data-caption="Considered work, one client at a time"
+            class="group relative overflow-hidden rounded-2xl bg-brand-dark/5 reveal">
+            <img src="resources/images/hero.webp" alt="Inside the Bethany Beauty studio"
+              class="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.04]" width="1920" height="1280" loading="lazy" />
+            <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="pointer-events-none absolute inset-x-4 bottom-4 flex items-center justify-between text-left text-xs font-bold uppercase tracking-[0.16em] text-white opacity-0 transition duration-300 group-hover:opacity-100">
+              At work
+              <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </span>
+          </button>
+
+          <!-- TODO(instagram): point href at the real profile and correct the handle below. -->
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-placeholder="instagram profile"
+            class="flex flex-col items-center justify-center gap-4 rounded-2xl border border-dashed border-brand-gold/50 bg-brand-light px-6 py-10 text-center transition hover:border-brand-gold hover:bg-brand-gold/5 reveal">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold">
+              <i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i>
+            </span>
+            <span class="font-display text-lg text-brand-dark">More on Instagram</span>
+            <span class="text-xs uppercase tracking-[0.2em] text-brand-dark/65">@bethanybeauty</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ============================ REVIEWS ============================ -->
+    <!-- NOTE: Placeholder testimonials. Replace with real client reviews before publishing. -->
+    <section id="reviews" class="bg-brand-light py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-teal">Kind Words</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight text-brand-dark text-balance sm:text-4xl lg:text-[2.75rem]">
+            What clients say
+          </h2>
+          <div class="gold-rule mx-auto mt-6 w-24"></div>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <figure class="relative flex flex-col rounded-2xl bg-white p-8 shadow-sm reveal" data-placeholder="sample review - replace before launch">
+            <i class="fa-solid fa-quote-left absolute right-7 top-7 text-2xl text-brand-gold/20" aria-hidden="true"></i>
+            <div class="flex gap-1 text-[11px] text-brand-gold" role="img" aria-label="Rated 5 out of 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-5 flex-1 font-display text-lg leading-relaxed text-brand-dark/85">
+              &ldquo;I have never had nails last this well. Bethany took so much care with the
+              shape and my natural nails feel stronger than before.&rdquo;
+            </blockquote>
+            <figcaption class="mt-6 border-t border-black/5 pt-5">
+              <p class="text-sm font-bold text-brand-dark">Sarah M.</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-brand-dark/65">Gel overlay client</p>
+            </figcaption>
+          </figure>
+
+          <figure class="relative flex flex-col rounded-2xl bg-white p-8 shadow-sm reveal" data-placeholder="sample review - replace before launch">
+            <i class="fa-solid fa-quote-left absolute right-7 top-7 text-2xl text-brand-gold/20" aria-hidden="true"></i>
+            <div class="flex gap-1 text-[11px] text-brand-gold" role="img" aria-label="Rated 5 out of 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-5 flex-1 font-display text-lg leading-relaxed text-brand-dark/85">
+              &ldquo;The studio is calm and private, and nothing is rushed. It is the only
+              appointment I refuse to move around.&rdquo;
+            </blockquote>
+            <figcaption class="mt-6 border-t border-black/5 pt-5">
+              <p class="text-sm font-bold text-brand-dark">Thandi K.</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-brand-dark/65">Sculpted extensions</p>
+            </figcaption>
+          </figure>
+
+          <figure class="relative flex flex-col rounded-2xl bg-white p-8 shadow-sm reveal" data-placeholder="sample review - replace before launch">
+            <i class="fa-solid fa-quote-left absolute right-7 top-7 text-2xl text-brand-gold/20" aria-hidden="true"></i>
+            <div class="flex gap-1 text-[11px] text-brand-gold" role="img" aria-label="Rated 5 out of 5">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <blockquote class="mt-5 flex-1 font-display text-lg leading-relaxed text-brand-dark/85">
+              &ldquo;I came in to recover damaged nails and left with a plan, not a sales pitch.
+              Three appointments later they are healthy again.&rdquo;
+            </blockquote>
+            <figcaption class="mt-6 border-t border-black/5 pt-5">
+              <p class="text-sm font-bold text-brand-dark">Lerato D.</p>
+              <p class="mt-1 text-xs uppercase tracking-[0.18em] text-brand-dark/65">Soak-off &amp; recovery</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <p class="mt-10 text-center text-xs uppercase tracking-[0.22em] text-brand-dark/65 reveal">
+          <i class="fa-solid fa-certificate mr-2 text-brand-gold" aria-hidden="true"></i>
+          Bio Sculpture certified &middot; Appointment only
+        </p>
+      </div>
+    </section>
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq" class="border-t border-black/5 bg-white py-20 sm:py-28">
+      <div class="mx-auto max-w-3xl px-5 sm:px-8">
+        <div class="text-center reveal">
+          <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-teal">Good to know</p>
+          <h2 class="mt-4 font-display text-3xl leading-tight text-brand-dark text-balance sm:text-4xl">
+            Questions, answered
+          </h2>
+          <div class="gold-rule mx-auto mt-6 w-24"></div>
+        </div>
+
+        <div class="mt-12 space-y-4">
+          <details class="group rounded-2xl border border-black/5 bg-white px-6 py-5 shadow-sm reveal">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-display text-lg text-brand-dark">
+              Do you work with acrylic or other gel brands?
+              <i class="fa-solid fa-chevron-down shrink-0 text-xs text-brand-teal transition group-open:rotate-180" aria-hidden="true"></i>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-brand-dark/70">
+              No. The studio is strictly Bio Sculpture &mdash; one professional gel system, used
+              as it is designed to be used. No acrylics, and no mixing brands on the same nail.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-black/5 bg-white px-6 py-5 shadow-sm reveal">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-display text-lg text-brand-dark">
+              How often will I need a refill?
+              <i class="fa-solid fa-chevron-down shrink-0 text-xs text-brand-teal transition group-open:rotate-180" aria-hidden="true"></i>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-brand-dark/70">
+              Every 2&ndash;3 weeks keeps the set looking fresh and protects the natural nail. We
+              will settle on a rhythm that suits how fast your nails grow.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-black/5 bg-white px-6 py-5 shadow-sm reveal">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-display text-lg text-brand-dark">
+              Where is the studio?
+              <i class="fa-solid fa-chevron-down shrink-0 text-xs text-brand-teal transition group-open:rotate-180" aria-hidden="true"></i>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-brand-dark/70">
+              It is a private home studio, one client at a time. The full address is shared as soon
+              as your booking is confirmed.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-black/5 bg-white px-6 py-5 shadow-sm reveal">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-display text-lg text-brand-dark">
+              How do I book, and how quickly will I hear back?
+              <i class="fa-solid fa-chevron-down shrink-0 text-xs text-brand-teal transition group-open:rotate-180" aria-hidden="true"></i>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-brand-dark/70">
+              Send the form below, message on WhatsApp, or phone
+              <a href="tel:+27747409490" class="font-bold text-brand-teal underline decoration-brand-gold underline-offset-2">074 740 9490</a>.
+              Requests are usually answered within a day.
+            </p>
+          </details>
+
+          <details class="group rounded-2xl border border-black/5 bg-white px-6 py-5 shadow-sm reveal">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-left font-display text-lg text-brand-dark">
+              How is pricing worked out?
+              <i class="fa-solid fa-chevron-down shrink-0 text-xs text-brand-teal transition group-open:rotate-180" aria-hidden="true"></i>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-brand-dark/70">
+              It depends on the length and condition of your natural nails. Hand-painted art, a
+              classic French or a chrome finish starts from R80, and your price is confirmed
+              before any work begins.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ BOOKING ============================ -->
+    <section id="book" class="bg-brand-light py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="grid overflow-hidden rounded-3xl shadow-2xl reveal lg:grid-cols-2">
+
+          <!-- Left: contact panel -->
+          <div class="relative overflow-hidden bg-brand-teal px-7 py-10 text-white sm:px-10 sm:py-12 lg:px-12">
+            <div class="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-white/5 blur-2xl" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-brand-gold/10 blur-2xl" aria-hidden="true"></div>
+
+            <div class="relative">
+              <p class="text-[11px] font-bold uppercase tracking-[0.35em] text-brand-gold">Appointments</p>
+              <h2 class="mt-4 font-display text-3xl leading-tight text-balance sm:text-4xl">
+                Book an Appointment
+              </h2>
+              <div class="gold-rule mt-6 w-24"></div>
+
+              <p class="mt-6 max-w-sm text-base leading-relaxed text-white/75">
+                The studio runs by appointment only, one client at a time. Send your request
+                and I will confirm your time by message &mdash; usually within a day.
+              </p>
+
+              <ul class="mt-10 space-y-5">
+                <li class="flex items-start gap-4">
+                  <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <i class="fa-solid fa-phone text-sm text-brand-gold" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-white/80">Phone</p>
+                    <a href="tel:+27747409490" class="mt-1 block font-display text-lg text-white transition hover:text-brand-gold">
+                      074 740 9490
+                    </a>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
+                    <i class="fa-regular fa-envelope text-sm text-brand-gold" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-white/80">Email</p>
+                    <a href="mailto:rebekah@bethanybeauty.co.za" class="mt-1 block break-all font-display text-lg text-white transition hover:text-brand-gold">
+                      rebekah@bethanybeauty.co.za
+                    </a>
+                  </div>
+                </li>
+              </ul>
+
+              <p class="mt-10 flex items-start gap-3 border-t border-white/15 pt-6 text-sm leading-relaxed text-white/85">
+                <i class="fa-solid fa-location-dot mt-1 text-brand-gold" aria-hidden="true"></i>
+                <span>Private home studio &mdash; the full address is shared once your booking is confirmed.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: request form.
+               There is no backend yet, so while action="#" the submit handler hands the
+               enquiry off to WhatsApp (number is read from the floating WhatsApp button).
+               Point action at a real endpoint (Formspree, Netlify Forms, ...) and the
+               handler steps aside so the form posts normally. -->
+          <div class="bg-white px-7 py-10 text-brand-dark sm:px-10 sm:py-12 lg:px-12">
+            <h3 class="font-display text-2xl">Request a booking</h3>
+            <p class="mt-2 text-sm leading-relaxed text-brand-dark/60">
+              All fields marked with <span class="text-brand-teal">*</span> are required.
+            </p>
+
+            <form id="booking-form" class="mt-7 space-y-5" action="#" method="post" novalidate>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="firstName" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                    First name <span class="text-brand-teal">*</span>
+                  </label>
+                  <input id="firstName" name="firstName" type="text" autocomplete="given-name" required
+                    class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/65 focus:border-brand-teal focus:bg-white focus:outline-none"
+                    placeholder="Naledi" />
+                </div>
+                <div>
+                  <label for="lastName" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                    Last name <span class="text-brand-teal">*</span>
+                  </label>
+                  <input id="lastName" name="lastName" type="text" autocomplete="family-name" required
+                    class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/65 focus:border-brand-teal focus:bg-white focus:outline-none"
+                    placeholder="Mokoena" />
+                </div>
+              </div>
+
+              <div>
+                <label for="phone" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                  Phone number <span class="text-brand-teal">*</span>
+                </label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required
+                  pattern="[0-9+()\s-]{10,}" title="At least 10 digits, for example 074 740 9490"
+                  class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark placeholder:text-brand-dark/65 focus:border-brand-teal focus:bg-white focus:outline-none"
+                  placeholder="074 740 9490" />
+              </div>
+
+              <div>
+                <label for="service" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                  Service required <span class="text-brand-teal">*</span>
+                </label>
+                <select id="service" name="service" required
+                  class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark focus:border-brand-teal focus:bg-white focus:outline-none">
+                  <option value="" selected disabled>Select a service</option>
+                  <option>Bio Sculpture Overlay</option>
+                  <option>Nail Sculpting (extensions)</option>
+                  <option>Maintenance / refill</option>
+                  <option>Removal / soak-off</option>
+                </select>
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="date" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                    Preferred date <span class="text-brand-teal">*</span>
+                  </label>
+                  <input id="date" name="date" type="date" required
+                    class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark focus:border-brand-teal focus:bg-white focus:outline-none" />
+                </div>
+                <div>
+                  <label for="time" class="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/65">
+                    Preferred time
+                  </label>
+                  <select id="time" name="time"
+                    class="w-full rounded-xl border border-black/10 bg-brand-light px-4 py-3 text-sm text-brand-dark focus:border-brand-teal focus:bg-white focus:outline-none">
+                    <option>Any time</option>
+                    <option>Morning (09:00 &ndash; 12:00)</option>
+                    <option>Midday (12:00 &ndash; 14:00)</option>
+                    <option>Afternoon (14:00 &ndash; 17:00)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit"
+                class="flex w-full items-center justify-center gap-2.5 rounded-full bg-brand-teal px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-brand-dark">
+                Send Booking Request
+                <i class="fa-solid fa-paper-plane text-[0.7rem]" aria-hidden="true"></i>
+              </button>
+
+              <p class="text-center text-[11px] leading-relaxed text-brand-dark/65">
+                Your details are used only to arrange this appointment.
+              </p>
+
+              <p id="booking-status" role="status" aria-live="polite"
+                class="hidden rounded-xl bg-brand-teal/10 px-4 py-3 text-center text-sm text-brand-teal"></p>
+            </form>
+
+            <noscript>
+              <p class="mt-4 rounded-xl border border-brand-gold/40 bg-brand-gold/10 px-4 py-3 text-sm leading-relaxed text-brand-dark/85">
+                This form needs JavaScript. You can also book directly by
+                <a href="tel:+27747409490" class="font-bold underline decoration-brand-gold underline-offset-2 hover:text-brand-teal">phoning 074 740 9490</a>,
+                <a href="mailto:rebekah@bethanybeauty.co.za" class="font-bold underline decoration-brand-gold underline-offset-2 hover:text-brand-teal">emailing rebekah@bethanybeauty.co.za</a>
+                or
+                <a href="https://wa.me/27747409490?text=Hi%20Rebekah,%20I'd%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="font-bold underline decoration-brand-gold underline-offset-2 hover:text-brand-teal">messaging on WhatsApp</a>.
+              </p>
+            </noscript>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-brand-dark pb-24 pt-14 text-white sm:pb-16 sm:pt-16">
+    <div class="mx-auto flex max-w-4xl flex-col items-center px-5 text-center sm:px-8">
+      <!-- White-on-charcoal version of the lockup, keyed to transparency so it sits
+           straight on the dark footer (no white plate behind it). -->
+      <img src="images/logo-white.png" alt="Bethany Beauty" width="239" height="167"
+        loading="lazy" decoding="async" class="h-28 w-auto sm:h-32" />
+
+      <p class="mt-7 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[10px] font-bold uppercase leading-relaxed tracking-[0.28em] text-brand-gold sm:text-[11px]">
+        <span>Strictly Bio Sculpture Only</span>
+        <span class="text-white/25" aria-hidden="true">&bull;</span>
+        <span>Bio Sculpture Certified</span>
+      </p>
+
+      <div class="mt-8 h-px w-16 bg-white/15" aria-hidden="true"></div>
+
+      <p class="mt-6 text-xs text-white/65">
+        &copy; <span id="year">2026</span> Bethany Beauty. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================ WHATSAPP BUTTON ============================ -->
+  <a id="studio-whatsapp" href="https://wa.me/27747409490?text=Hi%20Rebekah,%20I'd%20like%20to%20inquire%20about%20an%20appointment."
+    target="_blank" rel="noopener noreferrer" aria-label="Chat with Bethany Beauty on WhatsApp"
+    class="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition hover:scale-105 hover:bg-[#1EBE5B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#25D366] motion-reduce:transition-none motion-reduce:hover:scale-100 sm:bottom-6 sm:right-6 sm:h-16 sm:w-16">
+    <i class="fa-brands fa-whatsapp text-[1.6rem] sm:text-[1.9rem]" aria-hidden="true"></i>
+  </a>
+
+  <!-- ============================ LIGHTBOX ============================ -->
+  <div id="lightbox" class="fixed inset-0 z-[120] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm sm:p-8"
+    role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <button id="lightbox-close" type="button" aria-label="Close image viewer"
+      class="absolute right-4 top-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 text-white transition hover:border-brand-gold hover:text-brand-gold sm:right-6 sm:top-6">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+    <button id="lightbox-prev" type="button" aria-label="Previous image"
+      class="absolute left-2 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 text-white transition hover:border-brand-gold hover:text-brand-gold sm:left-6">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button id="lightbox-next" type="button" aria-label="Next image"
+      class="absolute right-2 top-1/2 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 text-white transition hover:border-brand-gold hover:text-brand-gold sm:right-6">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
+    <figure class="w-full max-w-4xl">
+      <img id="lightbox-img" alt="" decoding="async" class="mx-auto max-h-[76vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl" />
+      <figcaption id="lightbox-caption" class="mt-4 text-center text-xs uppercase tracking-[0.22em] text-white/60"></figcaption>
+    </figure>
+  </div>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
+

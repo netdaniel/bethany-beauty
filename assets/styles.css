@@ -1,0 +1,176 @@
+/* Bethany Beauty - custom styles. Tailwind utilities live in assets/tailwind.css. */
+/* ---------------------------------------------------------------
+     Base
+  --------------------------------------------------------------- */
+  html {
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    background-color: #F9F9F9;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #D4AF37;
+    color: #1A1A1A;
+  }
+
+  /* ---------------------------------------------------------------
+     Hero background: gradient overlay + image placeholder
+  --------------------------------------------------------------- */
+  .hero-bg {
+    background-image:
+      linear-gradient(
+        100deg,
+        rgba(26, 26, 26, 0.92) 0%,
+        rgba(26, 26, 26, 0.78) 42%,
+        rgba(0, 102, 102, 0.55) 78%,
+        rgba(0, 102, 102, 0.42) 100%
+      ),
+      url('../resources/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 767px) {
+    .hero-bg {
+      background-position: 62% center;
+    }
+  }
+
+  /* Centred hero copy: soft radial scrim keeps white text legible over any photo area */
+  .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 75% 65% at 50% 50%,
+      rgba(26, 26, 26, 0.62) 0%,
+      rgba(26, 26, 26, 0.34) 62%,
+      rgba(26, 26, 26, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Full-height hero: svh keeps it stable under mobile browser chrome */
+  .hero-full {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  /* ---------------------------------------------------------------
+     Small utilities
+  --------------------------------------------------------------- */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-rule {
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #D4AF37, transparent);
+  }
+
+  .nav-link {
+    position: relative;
+    padding-bottom: 0.25rem;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: #D4AF37;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    width: 100%;
+  }
+
+  /* Fixed white header: shadow deepens once the page scrolls (class toggled with JS) */
+  #site-header {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 rgba(26, 26, 26, 0.06), 0 10px 30px -26px rgba(26, 26, 26, 0.45);
+    transition: box-shadow 0.35s ease;
+  }
+
+  #site-header.is-scrolled,
+  #site-header.menu-open {
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.06), 0 18px 40px -22px rgba(26, 26, 26, 0.55);
+  }
+
+  /* ---------------------------------------------------------------
+     Logo (images/logo.png, transparent, black script)
+     drop-shadow() follows the alpha channel, so the shadow traces the
+     letterforms instead of drawing a grey rectangle round the image.
+     A 1px contact pass keeps the hairline strokes crisp on the white
+     header; the wider pass adds a little depth.
+  --------------------------------------------------------------- */
+  .logo-shadow {
+    filter: drop-shadow(0 1px 1px rgba(26, 26, 26, 0.22))
+            drop-shadow(0 2px 5px rgba(26, 26, 26, 0.10));
+  }
+
+  /* Scroll reveal (only when JS is running) */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .js .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .nav-link::after {
+      transition: none;
+    }
+  }
+
+  /* Keyboard focus */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 3px;
+  }
+
+/* WebP hero for supporting browsers; the JPEG above stays as fallback. */
+@supports (background-image: image-set(url("x") type("image/webp") 1x)) {
+  .hero-bg {
+    background-image:
+      linear-gradient(
+        100deg,
+        rgba(26, 26, 26, 0.92) 0%,
+        rgba(26, 26, 26, 0.78) 42%,
+        rgba(0, 102, 102, 0.55) 78%,
+        rgba(0, 102, 102, 0.42) 100%
+      ),
+      image-set(
+        url("../resources/images/hero.webp") type("image/webp") 1x,
+        url("../resources/images/hero.jpg") type("image/jpeg") 1x
+      );
+  }
+}

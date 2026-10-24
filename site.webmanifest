@@ -1,0 +1,18 @@
+{
+  "name": "Bethany Beauty",
+  "short_name": "Bethany",
+  "description": "Strictly Bio Sculpture nail studio. By appointment only.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#006666",
+  "icons": [
+    {
+      "src": "resources/images/favicon.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

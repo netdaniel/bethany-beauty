@@ -1,0 +1,5 @@
+/* Tailwind entry point. Built output: assets/tailwind.css (committed, so the site
+   works with no build step — just re-run `npm run build:css` after editing markup). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

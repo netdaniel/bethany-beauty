@@ -1,0 +1,14 @@
+{
+  "name": "bethany-beauty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bethany Beauty - strictly Bio Sculpture nail studio. Static one-page site.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/tailwind.src.css -o ./assets/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./assets/tailwind.src.css -o ./assets/tailwind.css --watch",
+    "serve": "python3 -m http.server 8137 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
